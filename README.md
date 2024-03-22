@@ -1,6 +1,6 @@
 # filter lists!
 
-A little collection of a few small filter lists by yours truly, mostly based off of my own browsing experiences. Don't expect too much from them, of course; I'm just keeping these up to date as I please, and won't attempt to actively maintain them (unless of course it breaks something for me), though I will do my best to keep up with any issues if you put them in the [issue tracker](../../../issues). No promises though!
+A little collection of a few small filter lists by yours truly, mostly based off of my own browsing experiences. Don't expect too much from them, of course; I'm just keeping these up to date as I please, and won't attempt to actively maintain them (unless of course it breaks something for me), though I will do my best to keep up with any issues if you put them in the [issue tracker](../../issues). No promises though!
 
 Primarily aimed for use with [uBlock Origin](https://ublockorigin.com). May work with AdGuard, definitely not with ABP, but I won't be testing anyway. Why? Well, I just don't see the point in using any other blocking extension.
 
