@@ -10,4 +10,4 @@ The lists in this repository will be split up into folders, each of which will h
 
 | Name | Description |
 | ---- | ----------- |
-| [**Fun Laser**](fun-laser) ([subscribe](https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/strayPetal/filter-lists/main/fun-laser/fun-laser.txt)) | A rather aggressive blocklist for the sites I frequent. As a laser, its efforts are quite concentrated on select sites, but it does nothing for those that aren't in the line of fire. |
+| [**Fun Laser**](fun-laser) ([subscribe](https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/strayPetal/filter-lists/main/fun-laser/fun-laser.txt&title=Fun%20Laser)) | A rather aggressive blocklist for the sites I frequent. As a laser, its efforts are quite concentrated on select sites, but it does nothing for those that aren't in the line of fire. |
