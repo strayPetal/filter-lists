@@ -10,17 +10,19 @@
 *$from=bilibili.com,to=~akamaized.net|~akamai.net
 @@||hdslb.com/bfs/static/player/$from=bilibili.com,script
 
-!--- Google Docs (WIP) ---!
-! Known broken features: sharing
-*$from=docs.google.com,to=~docs.google.com|~googleusercontent.com|~ssl.gstatic.com|~fonts.gstatic.com
-/netcheck.gif$from=docs.google.com,image
-/jserror$from=docs.google.com,xhr
+!--- Google Docs ---!
+! TODO: investigate some more connections to //docs.google.com, some more could be blocked
+*$from=docs.google.com,strict3p,to=~apis.google.com|~googleusercontent.com|~ssl.gstatic.com
 ! redirect needed or else it will complain about internet connection
 *$from=docs.google.com,strict1p,script,redirect=noopjs
-! @@docs_offline$from=docs.google.com,script
 @@kix_core$from=docs.google.com,script
 @@kix_nestedsketchycore$from=docs.google.com,script
 @@kix_app$from=docs.google.com,script
 @@kix_docos$from=docs.google.com,script
 @@kix_tertiary$from=docs.google.com,script
 @@kix_pre_tertiary_deps$from=docs.google.com,script
+/jserror$from=docs.google.com,xhr
+@@||clients6.google.com/batch/drive/$from=docs.google.com,xhr
+/netcheck.gif$from=docs.google.com,image
+@@DriveShareDialogUi$from=docs.google.com,script
+@@/googlematerialicons$from=docs.google.com,font
