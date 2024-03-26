@@ -10,19 +10,18 @@
 *$from=bilibili.com,to=~akamaized.net|~akamai.net
 @@||hdslb.com/bfs/static/player/$from=bilibili.com,script
 
-!--- Google Docs ---!
-! KNOWN ISSUES: Docs Homepage, Google Sheets/Slides
+!--- Google Docs/Slides ---!
+! KNOWN ISSUES: docs homepage, Sheets
 ! TODO: investigate some more connections to //docs.google.com, some more could be blocked
 *$from=docs.google.com,strict3p,to=~apis.google.com|~googleusercontent.com|~ssl.gstatic.com
 ! redirect needed or else it will complain about internet connection
 *$from=docs.google.com,strict1p,script,redirect=noopjs
 ! scripts to exclude for functionality
-@@kix_core$from=docs.google.com,script
-@@kix_nestedsketchycore$from=docs.google.com,script
-@@kix_app$from=docs.google.com,script
-@@kix_docos$from=docs.google.com,script
-@@kix_tertiary$from=docs.google.com,script
-@@kix_pre_tertiary_deps$from=docs.google.com,script
+@@core__$from=docs.google.com,script
+@@app__$from=docs.google.com,script
+@@docos__$from=docs.google.com,script
+@@tertiary__$from=docs.google.com,script
+@@pre_tertiary_deps__$from=docs.google.com,script
 /jserror$from=docs.google.com,xhr
 ! fix sharing
 @@||clients6.google.com/batch/drive/$from=docs.google.com,xhr
