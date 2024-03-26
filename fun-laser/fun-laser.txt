@@ -17,7 +17,7 @@
 ! redirect needed or else it will complain about internet connection
 *$from=docs.google.com,strict1p,script,redirect=noopjs
 ! scripts to exclude for functionality
-@@core__$from=docs.google.com,script
+@@*core__$from=docs.google.com,script
 @@app__$from=docs.google.com,script
 @@docos__$from=docs.google.com,script
 @@tertiary__$from=docs.google.com,script
