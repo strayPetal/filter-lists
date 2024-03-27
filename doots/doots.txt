@@ -1,0 +1,16 @@
+! Title: Doots
+! Expires: 1 day
+! Last updated: 27/03/24
+! Homepage: https://github.com/strayPetal/filter-lists
+! Issues: https://github.com/strayPetal/filter-lists/issues
+! License: https://github.com/strayPetal/filter-lists/blob/main/LICENSE
+! Description: Just another generic blocklist for privacy!
+
+!-- random stuff Google connects to --!
+! clients6.google.com is often required for functionality, but all its subdomains are usually useless
+.clients6.google.com^
+companion__$domain=docs.google.com,script,redirect=noopjs
+/cleardot.gif$image,redirect=1x1.gif
+
+!-- PARAMS --!
+||google.com^$removeparam=usp
