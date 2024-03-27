@@ -11,20 +11,30 @@
 @@||hdslb.com/bfs/static/player/$from=bilibili.com,script
 
 !--- Google Docs/Slides ---!
-! KNOWN ISSUES: docs homepage, Sheets
-! TODO: investigate some more connections to //docs.google.com, some more could be blocked
-*$from=docs.google.com,strict3p,to=~apis.google.com|~googleusercontent.com|~ssl.gstatic.com
-! redirect needed or else it will complain about internet connection
-*$from=docs.google.com,strict1p,script,redirect=noopjs
-! scripts to exclude for functionality
+! KNOWN ISSUES: Docs Homepage, Google Sheets
+! NOTE: Most fonts will work without fonts.gstatic.com
+*$from=docs.google.com,to=~apis.google.com|~googleusercontent.com|~ssl.gstatic.com
+! Redirect needed or else it will complain about internet connection
+*$from=docs.google.com,strict1p,script,redirect-rule=noopjs
+! Reallow for functionality
 @@*core__$from=docs.google.com,script
 @@app__$from=docs.google.com,script
 @@docos__$from=docs.google.com,script
 @@tertiary__$from=docs.google.com,script
 @@pre_tertiary_deps__$from=docs.google.com,script
-/jserror$from=docs.google.com,xhr
-! fix sharing
+@@/bind$from=docs.google.com,xhr,image
+@@/font$from=docs.google.com,xhr
+@@/peruserchrome$from=docs.google.com,xhr
+@@/save$from=docs.google.com,xhr
+@@/scripts$from=docs.google.com,xhr
+@@/selection$from=docs.google.com,xhr
+@@/sync$from=docs.google.com,xhr
+@@/test$from=docs.google.com,xhr
+@@/trash$from=docs.google.com,xhr
+! Fix file sharing
+@@/driveshare$from=docs.google.com,frame
 @@||clients6.google.com/batch/drive/$from=docs.google.com,xhr
 @@DriveShareDialogUi$from=docs.google.com,script
-! icons
+! Icons and UI
+@@*$from=docs.google.com,strict1p,css
 @@/googlematerialicons$from=docs.google.com,font
