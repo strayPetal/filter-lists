@@ -1,0 +1,1 @@
+companion__$domain=docs.google.com,script,redirect=noopjs

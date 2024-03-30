@@ -1,4 +1,4 @@
-! Title: Doots
+! Title: strayPetal - Doots
 ! Expires: 1 day
 ! Last updated: 31/03/24
 ! Homepage: https://github.com/strayPetal/filter-lists
@@ -6,6 +6,7 @@
 ! License: https://github.com/strayPetal/filter-lists/blob/main/LICENSE
 ! Description: Small, generic privacy-centric blocklist.
 
-!#include include/block.txt
+!#include include/block-generic.txt
+!#include include/block-site-specific.txt
 !#include include/default-deny-light.txt
 !#include include/params.txt
