@@ -4,9 +4,9 @@
 ! Homepage: https://github.com/strayPetal/filter-lists
 ! Issues: https://github.com/strayPetal/filter-lists/issues
 ! License: https://github.com/strayPetal/filter-lists/blob/main/LICENSE
-! Description: Small, generic privacy-centric blocklist.
+! Description: Small, but potent privacy-centric blocklist.
 
 !#include include/block-generic.txt
-!#include include/block-site-specific.txt
-!#include include/default-deny-light.txt
 !#include include/params.txt
+!#include include/1b.txt
+!#include include/2a.txt

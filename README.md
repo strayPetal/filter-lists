@@ -6,7 +6,17 @@ Primarily aimed for use with [uBlock Origin](https://ublockorigin.com).
 
 Everything here is licensed under GPLv3! https://www.gnu.org/licenses/gpl-3.0.en.html
 
-| Name | Description |
-| ---- | ----------- |
-| **Doots** ([subscribe](https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/strayPetal/filter-lists/main/doots.txt&title=Doots)) | Small, generic privacy-centric blocklist. |
-| **Fun Laser** ([subscribe](https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/strayPetal/filter-lists/main/fun-laser.txt&title=Fun%20Laser)) | A rather aggressive blocklist for the sites I frequent. As a laser, its efforts are quite concentrated on select sites, but it does nothing for those that aren't in the line of fire. |
+## Network blocking lists
+_In order of least to most aggressive. I would recommend **Doots** for most people. **Only import one!**_
+
+**Doots Lite** - [subscribe](https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/strayPetal/filter-lists/main/doots-lite.txt&title=Doots%20Lite)\
+_Lighter version of my Doots list. Will break less stuff, but block significantly less hard._\
+Blocks any red flags that I stumble upon in the Logger while browsing.
+
+**Doots** - [subscribe](https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/strayPetal/filter-lists/main/doots.txt&title=Doots)\
+_Small, but potent privacy-centric blocklist._\
+Same as above, but where it's reasonable (i.e. you don't need a truckload of rules), it will use a default-deny approach to sites, meaning it will block everything from that site by default and only allow what's needed for the core functionality of the site.
+
+**Fun Laser** - [subscribe](https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/strayPetal/filter-lists/main/fun-laser.txt&title=Fun%20Laser)\
+_A rather aggressive blocklist for the sites I frequent. As a laser, its efforts are quite concentrated on select sites, but it does nothing for those that aren't in the line of fire._\
+Default-deny approach on all sites targeted, even those that need a large amount of reallowing to function.
