@@ -7,7 +7,8 @@ Primarily aimed for use with [uBlock Origin](https://ublockorigin.com).
 Everything here is licensed under GPLv3! https://www.gnu.org/licenses/gpl-3.0.en.html
 
 ## Network blocking lists
-_In order of least to most aggressive. I would recommend **Doots** for most people. **Only import one!**_
+### Privacy, bloat, etc
+Increase privacy, kill useless nonsense connections, and the like. Ordered from least to most aggressive. I would recommend **Doots** for most people. **Only import one!**
 
 **Doots Lite** - [subscribe](https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/strayPetal/filter-lists/main/doots-lite.txt&title=Doots%20Lite)\
 _Lighter version of my Doots list. Will break less stuff, but block significantly less hard._\
