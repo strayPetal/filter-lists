@@ -1,3 +1,10 @@
+! Title: [INTERNAL] block
+! Expires: 1 day
+! Last updated: 31/03/24
+! Homepage: https://github.com/strayPetal/filter-lists
+! Issues: https://github.com/strayPetal/filter-lists/issues
+! License: https://github.com/strayPetal/filter-lists/blob/main/LICENSE
+
 /cleardot.gif$image,redirect=1x1.gif
 
 ! clients6.google.com is often required for functionality, but all its subdomains are usually useless
