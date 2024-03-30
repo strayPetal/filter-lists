@@ -6,7 +6,7 @@
 ! License: https://github.com/strayPetal/filter-lists/blob/main/LICENSE
 ! Description: Lighter version of my Doots list. Will break less stuff, but block significantly less hard.
 
-!#include include/block-generic.txt
-!#include include/params.txt
-!#include include/1a.txt
-!#include include/1b.txt
+!#include internal/block-generic.txt
+!#include internal/params.txt
+!#include internal/1a.txt
+!#include internal/1b.txt
