@@ -1,6 +1,6 @@
 ! Title: Doots
 ! Expires: 1 day
-! Last updated: 27/03/24
+! Last updated: 31/03/24
 ! Homepage: https://github.com/strayPetal/filter-lists
 ! Issues: https://github.com/strayPetal/filter-lists/issues
 ! License: https://github.com/strayPetal/filter-lists/blob/main/LICENSE
@@ -8,4 +8,4 @@
 
 !#include include/block.txt
 !#include include/default-deny-light.txt
-!#include include/default-deny-params.txt
+!#include include/params.txt
