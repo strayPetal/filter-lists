@@ -1,1 +1,2 @@
+!--- Google Docs/Slides ---!
 companion__$from=docs.google.com,script,redirect=noopjs

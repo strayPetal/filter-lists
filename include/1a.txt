@@ -1,1 +1,2 @@
-||hdslb.com/bfs/seed/jinkela/short/user-fingerprint/$from=bilibili.com,script
+!--- Bilibili ---!
+/user-fingerprint$from=bilibili.com,script
