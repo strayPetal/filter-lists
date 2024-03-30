@@ -1,0 +1,9 @@
+/cleardot.gif$image,redirect=1x1.gif
+
+! clients6.google.com is often required for functionality, but all its subdomains are usually useless
+.clients6.google.com^
+! Google accounts stuff - still seems to work without
+||accounts.google.com^$strict3p
+||ogs.google.com^$strict3p
+||gstatic.com/feedback/
+companion__$domain=docs.google.com,script,redirect=noopjs

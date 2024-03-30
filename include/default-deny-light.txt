@@ -1,0 +1,3 @@
+!--- Bilibili ---!
+$from=bilibili.com,to=~akamaized.net|~akamai.net
+@@||hdslb.com/bfs/static/player/$from=bilibili.com,script
