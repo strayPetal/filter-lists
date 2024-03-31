@@ -23,5 +23,8 @@ $doc,removeparam=~?
 @@||google.*/search$doc,removeparam=~?
 ||google.*/search$doc,removeparam=~q
 
+@@||bing.*/search$removeparam=~?
+||bing.*/search$removeparam=~q
+
 
 !--- DIRTY UNBREAKS ---!
