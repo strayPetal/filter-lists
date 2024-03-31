@@ -7,24 +7,20 @@
 ! Description: Strip all parameters from a URL by default, and disable on certain sites. Don't use unless you're willing to do some unbreaking!
 
 !*  The one rule to remove them all!
-!*  Why the "removeparam=~", you may ask? If you just did:    $doc,removeparam
-!*  then to disable it you'd need to add a filter like this:  @@||site.to.reallow^$doc,removeparam
+!*  Why the "removeparam=~?", you may ask? If you just did:     $doc,removeparam
+!*  then to disable it you'd need to add a filter like this:    @@||site.to.reallow^$doc,removeparam
 !*  ...but that would also disable the removeparam filters in other filter lists too, leaving you now vulnerable to all the URL params that can now flow in unimpeded.
 !*  So in doing this, you give yourself a way to disable specifically only this filter, and allow other removeparam filters to function properly.
 !*  
-!*  By the way, "removeparam=~" I assume just means "remove all params that aren't nothing", and of course a param has to be something, so everything gets removed.
-!*  I assume this is more performant than using regex to achieve the same purpose, but I'm not entirely certain.
-!*  Using a regex filter also seems to dodge the problem described in the next paragraph...
-!*  (I before was using "removeparam=/^/" as my regex filter)
+!*  By the way, "removeparam=~?" just means "remove all params that aren't "?". Of course, params cannot be "?" because this is a reserved character.
 !*  
 !*  To reiterate, you can safely disable this filter list on specific sites by adding this filter in your "My filters":
-!*  @@||site.to.reallow^$doc,removeparam=~
-!*  NOTE: for some reason, if you create an exception filter like that, you no longer get any removeparam entries in Logger, so just bear that in mind when unbreaking sites.
-$doc,removeparam=~
+!*  @@||site.to.reallow^$doc,removeparam=~?
+$doc,removeparam=~?
 
 
 !--- CLEAN UNBREAKS ---!
-@@||google.*/search$doc,removeparam=~
+@@||google.*/search$doc,removeparam=~?
 ||google.*/search$doc,removeparam=~q
 
 
