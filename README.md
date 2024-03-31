@@ -7,9 +7,8 @@ You can report any breakage or suggest sites to target in the [issue tracker](..
 Everything here is licensed under GPLv3! https://www.gnu.org/licenses/gpl-3.0.en.html
 
 ## Network blocking lists
-### Privacy, bloat, URL params, etc
-Increase privacy, kill unnecessary connections, and the like. Ordered from least to most aggressive. I would recommend **Doots** for most people. **Only import one!**\
-_Also, some tracking URL params that aren't covered in other mainstream lists (so uBO default lists and [DandelionSprout's "Legitimate URL Shortener"](https://github.com/DandelionSprout/adfilt/discussions/163)) will be included in all of the following lists, at least until I can suggest for them to be added to Legit URL Shortener._
+### Privacy, bloat, etc
+Increase privacy, kill unnecessary connections, and the like. Ordered from least to most aggressive. I would recommend **Doots** for most people. **Only import one!**
 
 **Doots Lite** - [subscribe](https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/strayPetal/filter-lists/main/doots-lite.txt&title=Doots%20Lite)\
 _Lighter version of my Doots list. Will break less stuff, but block significantly less hard._\
@@ -22,3 +21,11 @@ Same as above, but where it's reasonable (i.e. you don't need a truckload of rul
 **Fun Laser** - [subscribe](https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/strayPetal/filter-lists/main/fun-laser.txt&title=Fun%20Laser)\
 _A rather aggressive blocklist for the sites I frequent. As a laser, its efforts are quite concentrated on select sites, but it does nothing for those that aren't in the line of fire._\
 Default-deny approach on all sites targeted, even those that need a large amount of reallowing to function.
+
+### URL param cleaning
+**Param Waiting List** - [subscribe](https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/strayPetal/filter-lists/main/param-waiting-list.txt&title=Param%20Waiting%20List)\
+_Remove URL params not present on DandelionSprout's "Legitimate URL Shortener" (the only list I use that targets params). Holding zone until I (eventually) suggest for their addition to that list._
+
+**Death to Params!** - [subscribe](https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/strayPetal/filter-lists/main/death-to-params.txt&title=Death%20to%20Params)\
+_Strip all parameters from a URL by default, and disable on certain sites. Don't use unless you're willing to do some unbreaking!_\
+You can use a filter in `My filters` to disable on certain sites yourself: `@@||site.to.reallow^$doc,removeparam=~?`
