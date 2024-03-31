@@ -5,3 +5,4 @@
 .clients6.google.com^
 ||accounts.google.com^$strict3p
 ||ogs.google.com^$strict3p
+||contacts.google.com^$strict3p
