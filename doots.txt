@@ -7,6 +7,5 @@
 ! Description: Small, but potent privacy-centric blocklist.
 
 !#include internal/block-generic.txt
-!#include internal/params.txt
 !#include internal/1b.txt
 !#include internal/2a.txt

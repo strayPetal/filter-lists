@@ -7,6 +7,5 @@
 ! Description: Lighter version of my Doots list. Will break less stuff, but block significantly less hard.
 
 !#include internal/block-generic.txt
-!#include internal/params.txt
 !#include internal/1a.txt
 !#include internal/1b.txt
