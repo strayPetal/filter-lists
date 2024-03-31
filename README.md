@@ -1,8 +1,8 @@
 # filter lists!
 
-A little collection of a few small filter lists by yours truly, mostly based off of my own browsing experiences. Don't expect too much from them, of course; I'm just keeping these up to date as I please, and won't attempt to actively maintain them (unless of course it breaks something for me), though I will do my best to keep up with any issues if you put them in the [issue tracker](../../issues). No promises though!
+**A little collection of a few small filter lists by yours truly, mostly based off of my own browsing experiences.** Don't expect too much from them, of course; I'm just updating these whenever I wish. Aimed for use with [uBlock Origin](https://ublockorigin.com); if you aren't using this, then **don't bother**.
 
-Primarily aimed for use with [uBlock Origin](https://ublockorigin.com). If you aren't using these lists with uBO or AdGuard, then **don't bother**. I'll only accept issues if you're using uBO, and won't bother to investigate issues with other blocking extensions, simply because I cannot be bothered.
+You can report any breakage or suggest sites to target in the [issue tracker](../../issues). However, do note that if you report issues with blocking extensions other than uBO, then I won't do anything about them.
 
 Everything here is licensed under GPLv3! https://www.gnu.org/licenses/gpl-3.0.en.html
 

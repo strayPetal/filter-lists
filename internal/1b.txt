@@ -1,2 +1,3 @@
 !--- Google Docs/Slides ---!
+! This will stop a lot of other unnecessary scripts being loaded.
 companion__$from=docs.google.com,script,redirect=noopjs
