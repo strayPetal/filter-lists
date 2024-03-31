@@ -7,16 +7,22 @@
 ! Description: Strip all parameters from a URL by default, and disable on certain sites. Don't use unless you're willing to do some unbreaking!
 
 ! The one rule to remove them all!
-! Reason why the regex /./ is needed is, if you just did:
-!   $doc,removeparam
-! Then you'd have to do this to disable it:
-!   @@||some.site.com^$doc,removeparam
-! But this would then also disable any other removeparam things from other filter lists, which is unwanted because, if you're manually unbreaking, putting in a broad exception rule would leave you vulnerable to all the params that can now flood in unimpeded. 
-$doc,removeparam=/./
+! Reason why the regex /.??/ is needed is, if you just did: $doc,removeparam
+! Then you'd have to do this to disable it:                 @@||some.site.com^$doc,removeparam
+! But this would then also disable any other removeparam things from other filter lists, which is unwanted because doing this would leave you vulnerable to all the params that can now flood in unimpeded. So it allows for only this one specific rule to be targeted by an exception filter.
+! For further discussion: what's the most performant regex that will match everything?
+! /./     Match any 1 character
+! /.??/   Match any character 0 times. First ? makes it match 0-1 times, and second makes it non-greedy and match 0 times. I think.
+! /^.??/  Same as above but it has to be at the beginning. Would this make it more performant??
+! /^/     Just match start of string. Like. This must be the most performant right?
+! /$/     End of string. I don't know at this point yknow.
+$doc,removeparam=/^/
 
+! To reiterate, you can safely disable this filter list on specific sites by putting in the following rule:
+! @@||site.to.reallow^$doc,removeparam=/^/
 
 !--- CLEAN UNBREAKS ---!
-@@||google.*/search?$doc,removeparam=/./
+@@||google.*/search?$doc,removeparam=/^/
 ||google.*/search?$doc,removeparam=~q
 
 
