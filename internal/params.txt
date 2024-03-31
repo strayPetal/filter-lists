@@ -1,1 +1,7 @@
+! docs.google.com
 $removeparam=usp
+
+! www.google.com
+||www.google.*/search$doc,removeparam=~q
+! $removeparam=sca_upv
+! $removeparam=hl
