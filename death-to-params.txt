@@ -21,7 +21,7 @@ $doc,removeparam=~?
 
 !--- CLEAN UNBREAKS ---!
 @@||google.*/search$doc,removeparam=~?
-||google.*/search$doc,removeparam=~q
+||google.*/search$doc,removeparam=~/^(?:q|tbm)/
 
 @@||bing.*/search$doc,removeparam=~?
 ||bing.*/search$doc,removeparam=~q
