@@ -1,7 +1,8 @@
+/heartbeat
 /cleardot.gif$image,redirect=1x1.gif
 /netcheck.gif$image,redirect=1x1.gif
-/heartbeat
 
+!--- Google ---!
 ! clients6.google.com is often required for functionality, but all its subdomains are usually useless
 .clients6.google.com^
 ||accounts.google.com^$strict3p
