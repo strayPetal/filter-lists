@@ -13,4 +13,4 @@ $removeparam=usp
 ! $removeparam=sca_upv
 ! $removeparam=hl
 ! This is probably a more future-proof rule because only q= is ever needed for Google.
-||google.*/search$doc,removeparam=~q
+||google.*/search$doc,removeparam=~/^(?:q|tbm)/
