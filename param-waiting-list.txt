@@ -1,6 +1,5 @@
 ! Title: strayPetal - Param Waiting List
 ! Expires: 1 day
-! Last updated: 01/04/24
 ! Homepage: https://github.com/strayPetal/filter-lists
 ! Issues: https://github.com/strayPetal/filter-lists/issues
 ! License: https://github.com/strayPetal/filter-lists/blob/main/LICENSE

@@ -1,6 +1,5 @@
 ! Title: strayPetal - Fun Laser
 ! Expires: 1 day
-! Last updated: 31/03/24
 ! Homepage: https://github.com/strayPetal/filter-lists
 ! Issues: https://github.com/strayPetal/filter-lists/issues
 ! License: https://github.com/strayPetal/filter-lists/blob/main/LICENSE
