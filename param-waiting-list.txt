@@ -5,12 +5,14 @@
 ! License: https://github.com/strayPetal/filter-lists/blob/main/LICENSE
 ! Description: Remove URL params not present on DandelionSprout's "Legitimate URL Shortener" (the only list I use that targets params). Holding zone until I (eventually) suggest for their addition to that list.
 
-! docs.google.com
+! docs.google.com - seems to track how you got to the page in question. Only shows up very quickly before disappearing.
 $removeparam=usp
 
+!------------------------------------------------------------------------------!
+! The ones below will probably permanently stay here, because of their nature. !
+!------------------------------------------------------------------------------!
+
 ! www.google.com
-! $removeparam=sca_upv
-! $removeparam=hl
 ! q= is your search query
 ! The rest relate to which tab you are on.
 ||google.*/search$doc,removeparam=~/^(?:q|tbm|udm)/

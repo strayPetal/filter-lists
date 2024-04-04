@@ -5,16 +5,18 @@
 ! License: https://github.com/strayPetal/filter-lists/blob/main/LICENSE
 ! Description: Strip all parameters from a URL by default, and disable on certain sites. Don't use unless you're willing to do some unbreaking!
 
-!*  The one rule to remove them all!
-!*  Why the "removeparam=~?", you may ask? If you just did:     $doc,removeparam
-!*  then to disable it you'd need to add a filter like this:    @@||site.to.reallow^$doc,removeparam
-!*  ...but that would also disable the removeparam filters in other filter lists too, leaving you now vulnerable to all the URL params that can now flow in unimpeded.
-!*  So in doing this, you give yourself a way to disable specifically only this filter, and allow other removeparam filters to function properly.
-!*  
-!*  By the way, "removeparam=~?" just means "remove all params that aren't "?". Of course, params cannot be "?" because this is a reserved character.
-!*  
-!*  To reiterate, you can safely disable this filter list on specific sites by adding this filter in your "My filters":
-!*  @@||site.to.reallow^$doc,removeparam=~?
+!-----------------------------------------------------------------------------------------------------------------------------------------------------------------------!
+! The one rule to remove them all!                                                                                                                                      !
+! Why the "removeparam=~?", you may ask? If you just did:     $doc,removeparam                                                                                          !
+! then to disable it you'd need to add a filter like this:    @@||site.to.reallow^$doc,removeparam                                                                      !
+! ...but that would also disable the removeparam filters in other filter lists too, leaving you now vulnerable to all the URL params that can now flow in unimpeded.    !
+! So in doing this, you give yourself a way to disable specifically only this filter, and allow other removeparam filters to function properly.                         !
+!                                                                                                                                                                       !
+! By the way, "removeparam=~?" just means "remove all params that aren't "?". Of course, params cannot be "?" because this is a reserved character.                     !
+!                                                                                                                                                                       !
+! To reiterate, you can safely disable this filter list on specific sites by adding this filter in your "My filters":                                                   !
+! @@||site.to.reallow^$doc,removeparam=~?                                                                                                                               !
+!-----------------------------------------------------------------------------------------------------------------------------------------------------------------------!
 $doc,removeparam=~?
 
 
