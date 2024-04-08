@@ -1,3 +1,6 @@
+! Block all 3rd party fonts 
+$3p,font
+
 /heartbeat
 /cleardot.gif$image,redirect=1x1.gif
 /netcheck.gif$image,redirect=1x1.gif
