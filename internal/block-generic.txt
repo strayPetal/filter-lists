@@ -8,3 +8,6 @@
 ||accounts.google.com^$strict3p
 ||ogs.google.com^$strict3p
 ||contacts.google.com^$strict3p
+!!! Google Search
+! Block search suggestions - otherwise Google can see your thought process, and we can't have that! ($important needed to override an EasyList filter)
+||google.*/complete/$important

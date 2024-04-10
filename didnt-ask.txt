@@ -1,0 +1,17 @@
+! Title: strayPetal - Didn't Ask.
+! Expires: 1 day
+! Homepage: https://github.com/strayPetal/filter-lists
+! Issues: https://github.com/strayPetal/filter-lists/issues
+! License: https://github.com/strayPetal/filter-lists/blob/main/LICENSE
+! Description: Cosmetic filters to hide stuff I do not care about.
+
+!--- Tumblr ---!
+! "Recommendations"
+tumblr.com##.rZlUD:has(.rR_oZ.KDoiW)
+tumblr.com##.jxu4l
+! Blaze Button
+tumblr.com##.m5KTc:has(button[aria-label="Blaze"])
+! "Go ad-free today" - clearly haven't heard of uBO
+tumblr.com##.HOjIH
+! Blog posting
+tumblr.com##.wttFd
