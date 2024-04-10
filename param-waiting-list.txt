@@ -15,4 +15,4 @@ $removeparam=usp
 ! www.google.com
 ! q= is your search query
 ! The rest relate to which tab you are on.
-||google.*/search$doc,removeparam=~/^(?:q|tbm|udm)/
+||google.*/search$doc,removeparam=~/^(?:q|tbm|udm)=/
