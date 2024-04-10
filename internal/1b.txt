@@ -3,3 +3,4 @@
 companion__$from=docs.google.com,script,redirect=noopjs
 ! Stops loading link details. Surprisingly, this stops it from inserting a sneaky redirect through google.com/url?url=...
 /linkdetails$from=docs.google.com,xhr
+/jserror$from=docs.google.com,xhr
