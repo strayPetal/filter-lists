@@ -1,3 +1,5 @@
 !--- Google Docs/Slides ---!
-! This will stop a lot of other unnecessary scripts being loaded.
+! This prevents several other unnecessary (and really never used) features from loading in, also including some analytics script.
 companion__$from=docs.google.com,script,redirect=noopjs
+! Stops loading link details. Surprisingly, this stops it from inserting a sneaky redirect through google.com/url?url=...
+/linkdetails$from=docs.google.com,xhr
