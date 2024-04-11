@@ -25,7 +25,3 @@ Default-deny approach on all sites targeted, even those that need a large amount
 ### URL param cleaning
 **Param Waiting List** - [subscribe](https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/strayPetal/filter-lists/main/param-waiting-list.txt&title=Param%20Waiting%20List)\
 _Remove URL params not present on DandelionSprout's "Legitimate URL Shortener" (the only list I use that targets params). Holding zone until I (eventually) suggest for their addition to that list._
-
-**Death to Params!** - [subscribe](https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/strayPetal/filter-lists/main/death-to-params.txt&title=Death%20to%20Params)\
-_Strip all parameters from a URL by default, and disable on certain sites. Don't use unless you're willing to do some unbreaking!_\
-You can use a filter in `My filters` to disable on certain sites yourself: `@@||site.to.reallow^$doc,removeparam=~?`
