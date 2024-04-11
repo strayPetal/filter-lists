@@ -12,7 +12,7 @@ $removeparam=usp
 ! The ones below will probably permanently stay here, because of their nature. !
 !------------------------------------------------------------------------------!
 
-! www.google.com
-! q= is your search query
-! The rest relate to which tab you are on.
+!--- Google Search ---!
 ||google.*/search$doc,removeparam=~/^(?:q|tbm|udm)=/
+! Google Image Result
+||google.*/imgres$doc,removeparam=~/^(?:imgurl|imgrefurl|docid|tbnid)=/
