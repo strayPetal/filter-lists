@@ -1,2 +1,0 @@
-!--- Bilibili ---!
-/user-fingerprint$from=bilibili.com,script
