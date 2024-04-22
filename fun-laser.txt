@@ -5,6 +5,7 @@
 ! License: https://github.com/strayPetal/filter-lists/blob/main/LICENSE
 ! Description: A rather aggressive blocklist for the sites I frequent. As a laser, its efforts are quite concentrated on select sites, but it does nothing for those that aren't in the line of fire.
 
-!#include internal/block-generic.txt
-!#include internal/2a.txt
-!#include internal/2b.txt
+!#include internal/generic.txt
+!#include internal/a3.txt
+!#include internal/b3.txt
+!#include internal/c3.txt

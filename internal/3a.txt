@@ -1,8 +1,0 @@
-!--- Bilibili ---!
-$from=bilibili.com,to=~akamaized.net|~akamai.net
-@@||hdslb.com/bfs/static/player/$from=bilibili.com,script
-
-!--- Google Search ---!
-$from=www.google.*,~script,~css
-$from=www.google.*,strict3p
-@@||encrypted-tbn0.gstatic.com/images$from=www.google.*,image
