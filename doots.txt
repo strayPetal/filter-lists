@@ -5,7 +5,7 @@
 ! License: https://github.com/strayPetal/filter-lists/blob/main/LICENSE
 ! Description: Small, but potent privacy-centric blocklist.
 
-!#include internal/generic.txt
+!#include generic.txt
 !#include internal/a3.txt
 !#include internal/b2.txt
 !#include internal/c1.txt

@@ -3,7 +3,7 @@
 ! Homepage: https://github.com/strayPetal/filter-lists
 ! Issues: https://github.com/strayPetal/filter-lists/issues
 ! License: https://github.com/strayPetal/filter-lists/blob/main/LICENSE
-! Description: Strip all parameters from a URL by default, and disable on certain sites. Don't use unless you're willing to do some unbreaking!
+! Description: EXPERIMENTAL AS HELL! Strip all parameters from a URL by default, and disable on certain sites. Don't use unless you're willing to do some unbreaking!
 
 !-----------------------------------------------------------------------------------------------------------------------------------------------------------------------!
 ! The one rule to remove them all!                                                                                                                                      !
