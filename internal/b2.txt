@@ -3,3 +3,4 @@ $from=www.google.*,strict1p,~css,~script
 $from=www.google.*,strict3p,~image
 @@/async/*$from=www.google.*,xhr
 @@/k=boq-search.ViewPackageService$from=www.google.*,script
+@@||google.com/recaptcha/$from=www.google.*,image,xhr

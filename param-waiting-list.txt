@@ -13,6 +13,6 @@ $removeparam=usp
 !------------------------------------------------------------------------------!
 
 !--- Google Search ---!
-||google.*/search$doc,removeparam=~/^(?:q|tbm|udm)=/
+||google.*/search$doc,removeparam=~/^(?:q|tbm|udm|google_abuse)=/
 ! Google Image Result
 ||google.*/imgres$doc,removeparam=~/^(?:imgurl|imgrefurl|docid|tbnid)=/
