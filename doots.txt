@@ -16,7 +16,6 @@
 /netcheck.gif$image,redirect=1x1.gif
 
 ! clients6.google.com is often required for functionality, but all its subdomains are usually useless.
-! TODO: fix breakage of Drive
 .clients6.google.com^
 ||accounts.google.com^$strict3p
 ||ogs.google.com^
@@ -28,6 +27,11 @@
 !*** Even if you disable JS by default, you'd need to reallow for these sites, but that also
 !*** exposes you to tracking and all that. These filters are designed for those scenarios.
 !---------------------------------------------------------------------------------------------!
+
+! [quick-unbreaks]
+
+!--- Google Drive ---!
+@@||drivefrontend-pa.clients6.google.com^$from=drive.google.com,xhr
 
 ! [a3]
 
