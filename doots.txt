@@ -28,11 +28,6 @@
 !*** exposes you to tracking and all that. These filters are designed for those scenarios.
 !---------------------------------------------------------------------------------------------!
 
-! [quick-unbreaks]
-
-!--- Google Drive ---!
-@@||drivefrontend-pa.clients6.google.com^$from=drive.google.com,xhr
-
 ! [a3]
 
 !--- Bilibili ---!
@@ -40,7 +35,7 @@ $from=bilibili.com,to=~akamaized.net|~akamai.net
 @@||hdslb.com/bfs/static/player/$from=bilibili.com,script
 
 !--- Google Search ---!
-||www.google.*/search$doc,removeparam=~/^(?:q|tbm|udm|google_abuse|gbv)=/
+||www.google.*/search$doc,removeparam=~/^(?:q|tbm|udm|gbv|google_abuse)=/
 ||www.google.*/search$~image
 ! Enforces no scripting. Doesn't auto-redirect you to the JS-free version, though; you should enable the actual site switch.
 ||www.google.*/search*$csp=script-src 'none'
@@ -51,8 +46,13 @@ www.google.*##+js(href-sanitizer, a[href^="/url?q="], ?q)
 ! [c1]
 
 !--- Google Docs/Slides ---!
+||docs.google.com^$doc,removeparam=~authuser
 ! This would otherwise load in several other unnecessary scripts.
 companion__$from=docs.google.com,script,redirect=noopjs
 ! Surprisingly, stops it from inserting a sneaky redirect tracker.
 /linkdetails$from=docs.google.com,xhr
 /jserror$from=docs.google.com,xhr
+
+!--- Google Drive ---!
+@@||drivefrontend-pa.clients6.google.com^$from=drive.google.com,xhr
+||docs.google.com^$from=drive.google.com
