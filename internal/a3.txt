@@ -1,3 +1,12 @@
 !--- Bilibili ---!
 $from=bilibili.com,to=~akamaized.net|~akamai.net
 @@||hdslb.com/bfs/static/player/$from=bilibili.com,script
+
+!--- Google Search ---!
+||www.google.*/search$doc,removeparam=~/^(?:q|tbm|udm|google_abuse|gbv)=/
+||www.google.*/search$~image,~media
+! Basically enforces no scripting. Doesn't auto-redirect you to the JS-free version, though; you should enable the actual site switch for Google.
+||www.google.*/search*$csp=script-src 'none'
+! badfilter from EasyList
+@@||www.google.*/search?$from=google.ae|google.at|google.be|google.bg|google.by|google.ca|google.ch|google.cl|google.co.id|google.co.il|google.co.in|google.co.jp|google.co.ke|google.co.kr|google.co.nz|google.co.th|google.co.uk|google.co.ve|google.co.za|google.com|google.com.ar|google.com.au|google.com.br|google.com.co|google.com.ec|google.com.eg|google.com.hk|google.com.mx|google.com.my|google.com.pe|google.com.ph|google.com.pk|google.com.py|google.com.sa|google.com.sg|google.com.tr|google.com.tw|google.com.ua|google.com.uy|google.com.vn|google.cz|google.de|google.dk|google.dz|google.ee|google.es|google.fi|google.fr|google.gr|google.hr|google.hu|google.ie|google.it|google.lt|google.lv|google.nl|google.no|google.pl|google.pt|google.ro|google.rs|google.ru|google.se|google.sk,badfilter
+www.google.*##+js(href-sanitizer, a[href^="/url?q="], ?q)
