@@ -34,12 +34,11 @@
 $from=bilibili.com,to=~akamaized.net|~akamai.net
 @@||hdslb.com/bfs/static/player/$from=bilibili.com,script
 
-!--- Google Search ---!
-||www.google.*/search$doc,removeparam=~/^(?:q|tbm|udm|gbv|google_abuse)=/
-||www.google.*/search$~image
-! Enforces no scripting. Doesn't auto-redirect you to the JS-free version, though; you should enable the actual site switch.
-||www.google.*/search*$csp=script-src 'none'
-! Bad exception filter from EasyList.
+!--- Google Search (no-JS) ---!
+!--- Optimised for having JS switched off (either globally or for www.google.com specifically)
+||www.google.*/search?$doc,removeparam=~/^(?:q|tbm|udm|gbv|google_abuse)=/
+||www.google.*/search?$~image
+! Bad exception filter from EasyList - it's too lenient.
 @@||www.google.*/search?$from=google.ae|google.at|google.be|google.bg|google.by|google.ca|google.ch|google.cl|google.co.id|google.co.il|google.co.in|google.co.jp|google.co.ke|google.co.kr|google.co.nz|google.co.th|google.co.uk|google.co.ve|google.co.za|google.com|google.com.ar|google.com.au|google.com.br|google.com.co|google.com.ec|google.com.eg|google.com.hk|google.com.mx|google.com.my|google.com.pe|google.com.ph|google.com.pk|google.com.py|google.com.sa|google.com.sg|google.com.tr|google.com.tw|google.com.ua|google.com.uy|google.com.vn|google.cz|google.de|google.dk|google.dz|google.ee|google.es|google.fi|google.fr|google.gr|google.hr|google.hu|google.ie|google.it|google.lt|google.lv|google.nl|google.no|google.pl|google.pt|google.ro|google.rs|google.ru|google.se|google.sk,badfilter
 www.google.*##+js(href-sanitizer, a[href^="/url?q="], ?q)
 
@@ -47,12 +46,11 @@ www.google.*##+js(href-sanitizer, a[href^="/url?q="], ?q)
 
 !--- Google Docs/Slides ---!
 ||docs.google.com^$doc,removeparam=~authuser
-! This would otherwise load in several other unnecessary scripts.
+@@||docs.google.com/accounts/SetOSID?$removeparam
 companion__$from=docs.google.com,script,redirect=noopjs
-! Surprisingly, stops it from inserting a sneaky redirect tracker.
 /linkdetails$from=docs.google.com,xhr
 /jserror$from=docs.google.com,xhr
 
 !--- Google Drive ---!
-@@||drivefrontend-pa.clients6.google.com^$from=drive.google.com,xhr
 ||docs.google.com^$from=drive.google.com
+@@||drivefrontend-pa.clients6.google.com^$from=drive.google.com,xhr
