@@ -5,32 +5,34 @@
 ! License: https://github.com/strayPetal/filter-lists/blob/main/LICENSE
 ! Description: Small, but potent privacy-centric blocklist.
 
-!---------------------------------------------------------------------------------------------!
+!-----------------------------------------------------------------------------------------------------------------------------------!
 !*** GENERIC
-!*** These will probably always used for tracking purposes, or are generally unnecessary.
-!---------------------------------------------------------------------------------------------!
+!***   These will probably always used for tracking purposes, or are generally unnecessary.
+!-----------------------------------------------------------------------------------------------------------------------------------!
 
 /heartbeat
 /logimpressions
 /cleardot.gif$image,redirect=1x1.gif
 /netcheck.gif$image,redirect=1x1.gif
 
-! clients6.google.com is often required for functionality, but all its subdomains are usually useless.
+! Subdomains under clients6.google.com are generally worthless.
 .clients6.google.com^
 ||accounts.google.com^$strict3p
 ||ogs.google.com^
 ||contacts.google.com^$strict3p
 
-!---------------------------------------------------------------------------------------------!
+!-----------------------------------------------------------------------------------------------------------------------------------!
 !*** SITE-SPECIFIC
-!*** Tailored to certain high-traffic sites that need JS but also do dangerous things with it.
-!*** Even if you disable JS by default, you'd need to reallow for these sites, but that also
-!*** exposes you to tracking and all that. These filters are designed for those scenarios.
-!---------------------------------------------------------------------------------------------!
+!***   Tailored to certain high-traffic sites that need JS but also do disgusting things with it. If you use a "disable JS
+!*** everywhere and reallow when needed" approach, on these sites, you'd regain functionality, but be exposed to tracking scripts.
+!***   Sites with little functionality, such as news sites, shouldn't need to run JS in the first place. I won't include them in
+!*** this list, because that'd be a headache. I recommend just rolling with medium mode + no-JS for general browsing.
+!-----------------------------------------------------------------------------------------------------------------------------------!
 
 ! [a3]
 
 !--- Bilibili ---!
+||bilibili.com^$removeparam
 $from=bilibili.com,to=~akamaized.net|~akamai.net
 @@||hdslb.com/bfs/static/player/$from=bilibili.com,script
 
