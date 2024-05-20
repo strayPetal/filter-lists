@@ -24,9 +24,6 @@
 ||ogs.google.com^
 ||contacts.google.com^$strict3p
 
-! orphaned for now
-/netcheck.gif$image,redirect=1x1.gif
-
 !-----------------------------------------------------------------------------------------------------------------------------------!
 !*** SITE-SPECIFIC
 !***   Tailored to certain high-traffic sites that need JS but also do disgusting things with it. If you use a "disable JS
@@ -57,8 +54,9 @@ www.google.*##+js(href-sanitizer, a[href^="/url?q="], ?q)
 ||docs.google.com^$doc,removeparam=~authuser
 @@||docs.google.com/accounts/SetOSID?$removeparam
 companion__$from=docs.google.com,script,redirect=noopjs
-/linkdetails$from=docs.google.com,xhr
 /jserror$from=docs.google.com,xhr
+/linkdetails$from=docs.google.com,xhr
+/netcheck.gif?from=docs.google.com,image,redirect=1x1.gif
 
 !--- Google Drive ---!
 ||docs.google.com^$from=drive.google.com
