@@ -12,14 +12,20 @@
 
 /heartbeat
 /logimpressions
-/cleardot.gif$image,redirect=1x1.gif
-/netcheck.gif$image,redirect=1x1.gif
+
+!--- Generic Pixel Trackers ---!
+/cleardot.gif$image
+! https://matomo.org/faq/how-to/faq_176/ - There is no legitimate use case for embedding your PHP as a damn image.
+.php$image
 
 ! Subdomains under clients6.google.com are generally worthless.
 .clients6.google.com^
 ||accounts.google.com^$strict3p
 ||ogs.google.com^
 ||contacts.google.com^$strict3p
+
+! orphaned for now
+/netcheck.gif$image,redirect=1x1.gif
 
 !-----------------------------------------------------------------------------------------------------------------------------------!
 !*** SITE-SPECIFIC
