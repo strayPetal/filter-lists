@@ -6,8 +6,8 @@
 ! Description: Small, but potent privacy-centric blocklist.
 
 !-----------------------------------------------------------------------------------------------------------------------------------!
-!*** GENERIC
-!***   These will probably always used for tracking purposes, or are generally unnecessary.
+! GENERIC
+!   These will probably always used for tracking purposes, or are generally unnecessary.
 !-----------------------------------------------------------------------------------------------------------------------------------!
 
 /heartbeat
@@ -25,11 +25,10 @@
 ||contacts.google.com^$strict3p
 
 !-----------------------------------------------------------------------------------------------------------------------------------!
-!*** SITE-SPECIFIC
-!***   Tailored to certain high-traffic sites that need JS but also do disgusting things with it. If you use a "disable JS
-!*** everywhere and reallow when needed" approach, on these sites, you'd regain functionality, but be exposed to tracking scripts.
-!***   Sites with little functionality, such as news sites, shouldn't need to run JS in the first place. I won't include them in
-!*** this list, because that'd be a headache. I recommend just rolling with medium mode + no-JS for general browsing.
+! SITE-SPECIFIC (recommended to relax on these sites to easy mode)
+!   Sites with JS required for basic functionality, but are also known to do unfavourable things with it. If you generally browse
+!   with JS disabled and re-enable on broken sites, you would regain functionality, but become exposed to the risks of allowing
+!   scripting. These filters are designed for those sites.
 !-----------------------------------------------------------------------------------------------------------------------------------!
 
 ! [a3]
@@ -39,25 +38,29 @@
 $from=bilibili.com,to=~akamaized.net|~akamai.net
 @@||hdslb.com/bfs/static/player/$from=bilibili.com,script
 
-!--- Google Search (no-JS) ---!
-!--- Optimised for having JS switched off (either globally or for www.google.com specifically)
-! q = query | tbm,udm = tab | gbv = JS (gbv=1 requests the JS-less page) | nfpr = when using "Search instead for..." | google_abuse = for after solving captcha
-||www.google.*/search?$doc,removeparam=~/^(?:q|tbm|udm|gbv|nfpr|google_abuse)=/
-||www.google.*/search?$~image
-! Bad exception filter from EasyList - it's too lenient.
-@@||www.google.*/search?$from=google.ae|google.at|google.be|google.bg|google.by|google.ca|google.ch|google.cl|google.co.id|google.co.il|google.co.in|google.co.jp|google.co.ke|google.co.kr|google.co.nz|google.co.th|google.co.uk|google.co.ve|google.co.za|google.com|google.com.ar|google.com.au|google.com.br|google.com.co|google.com.ec|google.com.eg|google.com.hk|google.com.mx|google.com.my|google.com.pe|google.com.ph|google.com.pk|google.com.py|google.com.sa|google.com.sg|google.com.tr|google.com.tw|google.com.ua|google.com.uy|google.com.vn|google.cz|google.de|google.dk|google.dz|google.ee|google.es|google.fi|google.fr|google.gr|google.hr|google.hu|google.ie|google.it|google.lt|google.lv|google.nl|google.no|google.pl|google.pt|google.ro|google.rs|google.ru|google.se|google.sk,badfilter
-www.google.*##+js(href-sanitizer, a[href^="/url?q="], ?q)
-
 ! [c1]
 
 !--- Google Docs/Slides ---!
 ||docs.google.com^$doc,removeparam=~authuser
 @@||docs.google.com/accounts/SetOSID?$removeparam
 companion__$from=docs.google.com,script,redirect=noopjs
-/jserror$from=docs.google.com,xhr
-/linkdetails$from=docs.google.com,xhr
-/netcheck.gif?from=docs.google.com,image,redirect=1x1.gif
+/jserror?$from=docs.google.com,xhr
+/linkdetails?$from=docs.google.com,xhr
+/netcheck.gif?$from=docs.google.com,image,redirect=1x1.gif
 
 !--- Google Drive ---!
 ||docs.google.com^$from=drive.google.com
 @@||drivefrontend-pa.clients6.google.com^$from=drive.google.com,xhr
+
+!-----------------------------------------------------------------------------------------------------------------------------------!
+! SUPPLEMENTARY SITE-SPECIFIC (stay on medium mode + no-JS)
+!   No real point creating several blocking filters since the site works on medium mode + no-JS. These just supplement those for
+!   removing params, blocking 
+!-----------------------------------------------------------------------------------------------------------------------------------!
+
+!--- Google Search (no-JS) ---!
+! q = query | tbm,udm = tab | gbv = JS (gbv=1 requests the JS-less page) | nfpr = when using "Search instead for..." | google_abuse = for after solving captcha
+||www.google.*/search?$doc,removeparam=~/^(?:q|tbm|udm|gbv|nfpr|google_abuse)=/
+! Bad exception filter from EasyList - it's too lenient.
+@@||www.google.*/search?$from=google.ae|google.at|google.be|google.bg|google.by|google.ca|google.ch|google.cl|google.co.id|google.co.il|google.co.in|google.co.jp|google.co.ke|google.co.kr|google.co.nz|google.co.th|google.co.uk|google.co.ve|google.co.za|google.com|google.com.ar|google.com.au|google.com.br|google.com.co|google.com.ec|google.com.eg|google.com.hk|google.com.mx|google.com.my|google.com.pe|google.com.ph|google.com.pk|google.com.py|google.com.sa|google.com.sg|google.com.tr|google.com.tw|google.com.ua|google.com.uy|google.com.vn|google.cz|google.de|google.dk|google.dz|google.ee|google.es|google.fi|google.fr|google.gr|google.hr|google.hu|google.ie|google.it|google.lt|google.lv|google.nl|google.no|google.pl|google.pt|google.ro|google.rs|google.ru|google.se|google.sk,badfilter
+www.google.*##+js(href-sanitizer, a[href^="/url?q="], ?q)
