@@ -28,19 +28,15 @@
 ! SITE-SPECIFIC (recommended to relax on these sites to easy mode)
 !   Sites with JS required for basic functionality, but are also known to do unfavourable things with it. If you generally browse
 !   with JS disabled and re-enable on broken sites, you would regain functionality, but become exposed to the risks of allowing
-!   scripting. These filters are designed for those sites.
+!   scripting. These sets of filters are designed for such sites.
 !-----------------------------------------------------------------------------------------------------------------------------------!
 
-! [a3]
-
-!--- Bilibili ---!
+!--- Bilibili - www.bilibili.com - 3 ---!
 ||bilibili.com^$removeparam
 $from=bilibili.com,to=~akamaized.net|~akamai.net
 @@||hdslb.com/bfs/static/player/$from=bilibili.com,script
 
-! [c1]
-
-!--- Google Docs/Slides ---!
+!--- Google Docs/Slides - docs.google.com - 1 ---!
 ||docs.google.com^$doc,removeparam=~authuser
 @@||docs.google.com/accounts/SetOSID?$removeparam
 companion__$from=docs.google.com,script,redirect=noopjs
@@ -48,17 +44,18 @@ companion__$from=docs.google.com,script,redirect=noopjs
 /linkdetails?$from=docs.google.com,xhr
 /netcheck.gif?$from=docs.google.com,image,redirect=1x1.gif
 
-!--- Google Drive ---!
+!--- Google Drive - drive.google.com - 1 ---!
 ||docs.google.com^$from=drive.google.com
 @@||drivefrontend-pa.clients6.google.com^$from=drive.google.com,xhr
 
 !-----------------------------------------------------------------------------------------------------------------------------------!
 ! SUPPLEMENTARY SITE-SPECIFIC (stay on medium mode + no-JS)
-!   No real point creating several blocking filters since the site works on medium mode + no-JS. These just supplement those for
-!   removing params, blocking 
+!   No real point creating several blocking filters since the site works without need for relaxing on medium mode + no-JS. These
+!   filters just supplement dynamic filtering by filtering some unwanted connections that are still let through and/or removing
+!   unnecessary params.
 !-----------------------------------------------------------------------------------------------------------------------------------!
 
-!--- Google Search (no-JS) ---!
+!--- Google Search - www.google.*/search - 0 ---!
 ! q = query | tbm,udm = tab | gbv = JS (gbv=1 requests the JS-less page) | nfpr = when using "Search instead for..." | google_abuse = for after solving captcha
 ||www.google.*/search?$doc,removeparam=~/^(?:q|tbm|udm|gbv|nfpr|google_abuse)=/
 ! Bad exception filter from EasyList - it's too lenient.
