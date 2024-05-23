@@ -14,7 +14,7 @@
 /logimpressions
 
 !--- Generic Pixel Trackers ---!
-/cleardot.gif$image
+/cleardot.gif
 ! https://matomo.org/faq/how-to/faq_176/ - There is no legitimate use case for embedding your PHP as a damn image.
 .php$image
 
