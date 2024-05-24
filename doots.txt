@@ -1,3 +1,4 @@
+[uBlock Origin]
 ! Title: strayPetal - Doots
 ! Expires: 1 day
 ! Homepage: https://github.com/strayPetal/filter-lists
@@ -10,22 +11,24 @@
 !   These will probably always used for tracking purposes, or are generally unnecessary.
 !-----------------------------------------------------------------------------------------------------------------------------------!
 
+/cleardot.gif
 /heartbeat
 /logimpressions
+||fonts.googleapis.com^$3p
 
-!--- Generic Pixel Trackers ---!
-/cleardot.gif
-! https://matomo.org/faq/how-to/faq_176/ - There is no legitimate use case for embedding your PHP as a damn image.
-.php$image
+!--- War on "privacy-friendly" tracking ---!
+! https://matomo.org/faq/how-to/faq_176/
+.php?$image
 
-! Subdomains under clients6.google.com are generally worthless.
+!--- Google ---!
+! Subdomains of clients6.google.com are mostly unnecessary. Exceptions made where needed.
 .clients6.google.com^
 ||accounts.google.com^$strict3p
-||ogs.google.com^
 ||contacts.google.com^$strict3p
+||ogs.google.com^
 
 !-----------------------------------------------------------------------------------------------------------------------------------!
-! SITE-SPECIFIC (recommended to relax on these sites to easy mode)
+! SITE-SPECIFIC
 !   Sites with JS required for basic functionality, but are also known to do unfavourable things with it. If you generally browse
 !   with JS disabled and re-enable on broken sites, you would regain functionality, but become exposed to the risks of allowing
 !   scripting. These sets of filters are designed for such sites.
@@ -48,8 +51,12 @@ companion__$from=docs.google.com,script,redirect=noopjs
 ||docs.google.com^$from=drive.google.com
 @@||drivefrontend-pa.clients6.google.com^$from=drive.google.com,xhr
 
+!--- Gmail - mail.google.com - incomplete ---!
+$from=mail.google.com,to=~apis.google.com|~mail.google.com|~www.google.com|~googleusercontent.com|~gstatic.com
+mail.google.com##a[data-saferedirecturl]:remove-attr(data-saferedirecturl)
+
 !-----------------------------------------------------------------------------------------------------------------------------------!
-! SUPPLEMENTARY SITE-SPECIFIC (stay on medium mode + no-JS)
+! SUPPLEMENTARY SITE-SPECIFIC
 !   No real point creating several blocking filters since the site works without need for relaxing on medium mode + no-JS. These
 !   filters just supplement dynamic filtering by filtering some unwanted connections that are still let through and/or removing
 !   unnecessary params.

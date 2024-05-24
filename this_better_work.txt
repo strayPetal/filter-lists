@@ -1,4 +1,0 @@
-[uBlock Origin]
-! Title: please
-
-||example.com^$domain=~pleeeaseeeeeeee.workk.invalid
