@@ -26,6 +26,11 @@
 ||accounts.google.com^$strict3p
 ||contacts.google.com^$strict3p
 ||ogs.google.com^
+! Defuses a link redirect on Gmail, Drive, and probably more.
+google.com##a[data-saferedirecturl]:remove-attr(data-saferedirecturl)
+
+$removeparam=usp
+$removeparam=pli
 
 !-----------------------------------------------------------------------------------------------------------------------------------!
 ! SITE-SPECIFIC
@@ -53,7 +58,6 @@ companion__$from=docs.google.com,script,redirect=noopjs
 
 !--- Gmail - mail.google.com - incomplete ---!
 $from=mail.google.com,to=~apis.google.com|~mail.google.com|~www.google.com|~googleusercontent.com|~gstatic.com
-mail.google.com##a[data-saferedirecturl]:remove-attr(data-saferedirecturl)
 
 !-----------------------------------------------------------------------------------------------------------------------------------!
 ! SUPPLEMENTARY SITE-SPECIFIC
