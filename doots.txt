@@ -14,7 +14,16 @@
 /cleardot.gif
 /heartbeat
 /logimpressions
-||fonts.googleapis.com^$3p
+$removeparam=pli
+$removeparam=usp
+
+$ping
+
+$font
+||fonts.googleapis.com^
+! whitelist for material icons
+@@||fonts.googleapis.com^?family=Material+Icons$css
+@@||fonts.gstatic.com/s/materialicons/$font
 
 !--- War on "privacy-friendly" tracking ---!
 ! https://matomo.org/faq/how-to/faq_176/
@@ -28,9 +37,6 @@
 ||ogs.google.com^
 ! Defuses a link redirect on Gmail, Drive, and probably more.
 google.com##a[data-saferedirecturl]:remove-attr(data-saferedirecturl)
-
-$removeparam=usp
-$removeparam=pli
 
 !-----------------------------------------------------------------------------------------------------------------------------------!
 ! SITE-SPECIFIC
@@ -58,13 +64,6 @@ companion__$from=docs.google.com,script,redirect=noopjs
 
 !--- Gmail - mail.google.com - incomplete ---!
 $from=mail.google.com,to=~apis.google.com|~mail.google.com|~www.google.com|~googleusercontent.com|~gstatic.com
-
-!-----------------------------------------------------------------------------------------------------------------------------------!
-! SUPPLEMENTARY SITE-SPECIFIC
-!   No real point creating several blocking filters since the site works without need for relaxing on medium mode + no-JS. These
-!   filters just supplement dynamic filtering by filtering some unwanted connections that are still let through and/or removing
-!   unnecessary params.
-!-----------------------------------------------------------------------------------------------------------------------------------!
 
 !--- Google Search - www.google.*/search - 0 ---!
 ! q = query | tbm,udm = tab | gbv = JS (gbv=1 requests the JS-less page) | nfpr = when using "Search instead for..." | google_abuse = for after solving captcha
