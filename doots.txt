@@ -24,6 +24,7 @@ $font
 ! whitelist for material icons
 @@||fonts.googleapis.com^?family=Material+Icons$css
 @@||fonts.gstatic.com/s/materialicons/$font
+@@||fonts.gstatic.com/s/googlematerialicons/$font
 
 !--- War on "privacy-friendly" tracking ---!
 ! https://matomo.org/faq/how-to/faq_176/
