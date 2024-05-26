@@ -28,7 +28,8 @@ $font
 
 !--- War on "privacy-friendly" tracking ---!
 ! https://matomo.org/faq/how-to/faq_176/
-.php?$image
+&idsite=
+&rec=1
 
 !--- Google ---!
 ! Subdomains of clients6.google.com are mostly unnecessary. Exceptions made where needed.
