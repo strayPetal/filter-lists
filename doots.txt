@@ -11,10 +11,11 @@
 !   These will probably always used for tracking purposes, or are generally unnecessary.
 !-----------------------------------------------------------------------------------------------------------------------------------!
 
-/cleardot.gif
+/cleardot.gif$redirect=1x1.gif
+/generate_204
 /heartbeat
 /logimpressions
-||googleusercontent.com^$from=~google.com
+||googleusercontent.com^$from=~google.com|~youtube.com
 $removeparam=pli
 $removeparam=usp
 
@@ -52,6 +53,9 @@ google.com##a[data-saferedirecturl]:remove-attr(data-saferedirecturl)
 ||bilibili.com^$removeparam
 $from=bilibili.com,to=~akamaized.net|~akamai.net
 @@||hdslb.com/bfs/static/player/$from=bilibili.com,script
+
+!--- YouTube Music - music.youtube.com - 1 (very bare minimum) ---!
+||music.youtube.com/api/stats/watchtime?$xhr,domain=music.youtube.com
 
 !--- Google Docs/Slides - docs.google.com - 1 ---!
 ||docs.google.com^$doc,removeparam=~authuser
